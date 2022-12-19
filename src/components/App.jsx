@@ -1,5 +1,7 @@
+
 import { FeedbackOptions, Statistics, Section, Notification } from './index';
 import React, { Component } from 'react';
+import css from './App.module.css';
 
 
 export class App extends Component {
@@ -19,7 +21,7 @@ export class App extends Component {
     totalRating ? Math.ceil((positiveRating / totalRating) * 100) : 0;
 
   render() {
-     const options = Object.keys(this.state);
+    const options = Object.keys(this.state);
     const { good, neutral, bad } = this.state;
     const totalFeedback = this.countTotalFeedback(good, neutral, bad);
     const positivePercentage = this.countPositiveFeedbackPercentage(
@@ -28,7 +30,7 @@ export class App extends Component {
     );
 
     return (
-      <div>
+      <div className={css.wrapper}>
         <Section title="Please leave feedback">
           <FeedbackOptions
             options={options}
