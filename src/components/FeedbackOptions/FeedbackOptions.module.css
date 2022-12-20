@@ -1,21 +1,20 @@
 .feedbackList {
   display: flex;
-    align-items: center;
-    justify-content: space-between;
-    /* width: 300px; */
-      /* margin: auto; */
+  align-items: center;
+  justify-content: space-between;
+
 }
 
 .feedbackBtn {
   padding: 5px;
-    width: 90px;
-color: rgb(49, 52, 52);
-background-color: white;
-    border-radius: 5px;
-    border: 1px solid #000;
-    cursor: pointer;
+  width: 90px;
+  color: rgb(49, 52, 52);
+  background-color: white;
+  border-radius: 5px;
+  border: 1px solid #000;
+  cursor: pointer;
   font-size: 16px;
-   
+
 }
 
 .feedbackBtn:hover,

@@ -1,8 +1,6 @@
-
 import { FeedbackOptions, Statistics, Section, Notification } from './index';
 import React, { Component } from 'react';
 import css from './App.module.css';
-
 
 export class App extends Component {
   state = {
@@ -21,8 +19,8 @@ export class App extends Component {
     totalRating ? Math.ceil((positiveRating / totalRating) * 100) : 0;
 
   render() {
-    const options = Object.keys(this.state);
     const { good, neutral, bad } = this.state;
+    const options = Object.keys(this.state);
     const totalFeedback = this.countTotalFeedback(good, neutral, bad);
     const positivePercentage = this.countPositiveFeedbackPercentage(
       good,
@@ -37,7 +35,6 @@ export class App extends Component {
             onLeaveFeedback={this.onLeaveFeedback}
           />
         </Section>
-
         <Section title="Statistics">
           {totalFeedback ? (
             <Statistics
@@ -55,3 +52,4 @@ export class App extends Component {
     );
   }
 }
+
